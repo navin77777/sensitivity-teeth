@@ -22,30 +22,49 @@
         /* align-items: center; */
         padding: 1rem;
       }
+
+      .pm {
+        margin-left: 1rem;
+      }
+
+      .cButton {
+        display: flex;
+        align-items: center;
+        margin-left: 40%;
+      }
+
+      .cBtn {
+        width: 20%;
+        margin-bottom: 1.5rem;
+      }
     </style>
   </head>
   <body>
     <div class="container b" style="background-color: #ebebf2">
-      <span
-        ><p class="fw-bold fs-3 text">
-          Do you want to know whether you have
-          <span style="color: red"> sensitive teeth?</span>.
-        </p></span
-      >
+      <center>
+        <span
+          ><p class="fw-bold fs-3 text">
+            Do you want to know whether you have
+            <span style="color: red"> sensitive teeth?</span>.
+          </p></span
+        >
+      </center>
 
-      <div class="row m">
-        <div class="col-sm-8">
-          <p>
+      <div class="row m mt-5">
+        <div class="col-sm-9">
+          <p class="pm">
             <b
-              >1.) At what level would you say your symptoms are (5 being the
-              highest)? <span style="color: red">*</span>
+              >1.) Do you experience any sensation in your teeth when you
+              consume hot, cold, sweet or sour food and beverages? Rate the
+              sensation from 0 to 5, with 5 being the highest.
+              <span style="color: red">*</span>
             </b>
           </p>
         </div>
 
         <div class="row m">
           <div class="col-1"></div>
-          <div class="col-8">
+          <div class="col-">
             <div class="form-check form-check-inline">
               <input
                 class="form-check-input"
@@ -101,8 +120,8 @@
       </div>
 
       <div class="row m">
-        <div class="col-sm-8">
-          <p>
+        <div class="col-sm-9">
+          <p class="pm">
             <b
               >2.) Do you feel any of the following symptoms in your teeth while
               consuming certain foods and beverages, brushing or during chilly
@@ -113,7 +132,7 @@
 
         <div class="row m">
           <div class="col-1"></div>
-          <div class="col-8">
+          <div class="col-9">
             <input type="radio" id="sym1" name="sym" />
             <label for="sym1"> Discomfort </label>
             <br />
@@ -127,8 +146,8 @@
       </div>
 
       <div class="row m">
-        <div class="col-sm-8">
-          <p>
+        <div class="col-sm-9">
+          <p class="pm">
             <b
               >3.) How frequently do you brush?
               <span style="color: red">*</span>
@@ -138,7 +157,7 @@
 
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-8">
+          <div class="col-9">
             <input type="radio" name="f" id="f1" value="0" />
             <label for="f1">Once a day</label> <br />
             <input type="radio" name="f" id="f2" value="0" />
@@ -151,8 +170,8 @@
       </div>
 
       <div class="row m">
-        <div class="col-sm-8">
-          <p>
+        <div class="col-sm-9">
+          <p class="pm">
             <b
               >4.) For how long do you brush? <span style="color: red">*</span>
             </b>
@@ -161,7 +180,7 @@
 
         <div class="row m">
           <div class="col-1"></div>
-          <div class="col-8">
+          <div class="col-9">
             <input type="radio" name="l" id="g1" value="0" />
             <label for="g1"> < 2 minutes</label> <br />
             <input type="radio" name="l" id="g2" value="0" />
@@ -174,8 +193,8 @@
       </div>
 
       <div class="row m">
-        <div class="col-sm-8">
-          <p>
+        <div class="col-sm-9">
+          <p class="pm">
             <b
               >5.) What is the level of discomfort you feel while brushing your
               teeth (5 being the highest)? <span style="color: red">*</span>
@@ -185,7 +204,7 @@
 
         <div class="row m">
           <div class="col-1"></div>
-          <div class="col-8">
+          <div class="col-9">
             <div class="form-check form-check-inline">
               <input
                 class="form-check-input"
@@ -240,8 +259,8 @@
         </div>
 
         <div class="row m">
-          <div class="col-sm-8">
-            <p>
+          <div class="col-sm-9">
+            <p class="pm">
               <b
                 >6.) For how long you have been experiencing discomfort?
                 <span style="color: red">*</span>
@@ -251,7 +270,7 @@
 
           <div class="row m">
             <div class="col-1"></div>
-            <div class="col-8">
+            <div class="col-9">
               <input type="radio" name="fe" id="fe1" value="0" />
               <label for="fe1">A few days</label> <br />
               <input type="radio" name="fe" id="fe2" value="0" />
@@ -266,8 +285,8 @@
         </div>
 
         <div class="row m">
-          <div class="col-sm-8">
-            <p>
+          <div class="col-sm-9">
+            <p class="pm">
               <b
                 >7.) Do you have any of the following habits?
                 <span style="color: red">*</span>
@@ -277,7 +296,7 @@
 
           <div class="row m">
             <div class="col-1"></div>
-            <div class="col-8">
+            <div class="col-9">
               <input type="radio" name="h" id="h1" value="0" />
               <label for="h1">Grinding your teeth</label> <br />
               <input type="radio" name="h" id="h2" value="0" />
@@ -296,15 +315,18 @@
           </div>
         </div>
       </div>
-      <button
-        type="submit"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-        onclick="Calculate()"
-        class="btn btn-primary"
-      >
-        Check Result
-      </button>
+
+      <div class="cButton">
+        <button
+          type="submit"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="Calculate()"
+          class="btn btn-primary cBtn"
+        >
+          Check Result
+        </button>
+      </div>
     </div>
 
     <!-- Modal -->
